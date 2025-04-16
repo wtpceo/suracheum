@@ -38,6 +38,7 @@ export default function ReservationSection() {
   };
 
   const naverBookingUrl = "https://booking.naver.com/booking/6/bizes/1312309";
+  const naverTalkUrl = "https://talk.naver.com/ct/w18t72y?frm=mnmb&frm=nmb_detail&resizeTo=1588,1000nidref=https%3A%2F%2Fpcmap.place.naver.com%2Frestaurant%2F1159852496%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202504160959%26locale%3Dko%26svcName%3Dmap_pcv5%26searchText%3D%25EC%2588%2598%25EB%259D%25BC%25EC%25B1%2584%25EC%259B%2580";
   
   return (
     <section id="reservation" className="py-20 bg-amber-50">
@@ -119,19 +120,25 @@ export default function ReservationSection() {
                       className="font-medium text-amber-800"
                       whileHover={{ color: "#78350f", x: 2 }}
                     >
-                      031-8042-3319
+                      0507-1326-3322
                     </motion.span>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-24 text-gray-500 font-medium">카카오톡</div>
+                  <div className="w-24 text-gray-500 font-medium">네이버톡톡</div>
                   <div className="text-gray-700">
-                    <motion.span 
-                      className="font-medium text-amber-800"
+                    <motion.a 
+                      href={naverTalkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-amber-800 flex items-center"
                       whileHover={{ color: "#78350f", x: 2 }}
                     >
-                      @수라채움
-                    </motion.span>
+                      <span className="mr-1">실시간 채팅 문의</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 10H2V2H6V0H2C0.9 0 0 0.9 0 2V10C0 11.1 0.9 12 2 12H10C11.1 12 12 11.1 12 10V6H10V10ZM7 0V2H9.59L3.76 7.83L5.17 9.24L11 3.41V6H13V0H7Z" fill="currentColor"/>
+                      </svg>
+                    </motion.a>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -153,7 +160,27 @@ export default function ReservationSection() {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-amber-100">
+              <div className="mt-4 pt-4 border-t border-amber-100 space-y-3">
+                <a 
+                  href={naverTalkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  <motion.div
+                    className="flex items-center justify-center w-full bg-[#03c75a] text-white py-3 px-4 rounded-md"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <div className="mr-2">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0C3.582 0 0 2.896 0 6.467C0 8.72 1.434 10.7 3.59 11.86L2.682 15.066C2.627 15.252 2.813 15.401 2.976 15.302L6.968 12.747C7.302 12.785 7.646 12.804 8 12.804C12.418 12.804 16 9.908 16 6.337C16 2.896 12.418 0 8 0Z" fill="white"/>
+                      </svg>
+                    </div>
+                    <span className="font-medium">네이버톡톡 문의하기</span>
+                  </motion.div>
+                </a>
+
                 <a 
                   href={naverBookingUrl}
                   target="_blank"
