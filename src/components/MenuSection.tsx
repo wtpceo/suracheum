@@ -162,7 +162,7 @@ export default function MenuSection() {
   };
   
   return (
-    <section className="py-20 bg-amber-50">
+    <section id="menu" className="py-20 bg-amber-50">
       <motion.div 
         className="container mx-auto px-4"
         initial="hidden"

@@ -37,7 +37,7 @@ export default function AboutSection() {
   };
   
   return (
-    <section className="py-24 overflow-hidden">
+    <section id="about" className="py-24 overflow-hidden">
       <motion.div 
         className="container mx-auto px-4"
         initial="hidden"
@@ -57,6 +57,7 @@ export default function AboutSection() {
                   src="/image/about/main.jpg"
                   alt="수라채움 식당 내부"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
                 />
@@ -148,20 +149,6 @@ export default function AboutSection() {
                 <h3 className="text-lg font-bold text-amber-800 mb-2">품격 있는 공간</h3>
                 <p className="text-gray-600 text-sm">전통과 현대가 어우러진 고급스러운 공간에서 식사를 즐기세요.</p>
               </motion.div>
-            </motion.div>
-            
-            <motion.div
-              className="flex justify-start"
-              variants={itemVariants}
-            >
-              <motion.a 
-                href="#space" 
-                className="px-6 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-900 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                공간 둘러보기
-              </motion.a>
             </motion.div>
           </motion.div>
         </div>

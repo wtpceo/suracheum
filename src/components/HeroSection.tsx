@@ -5,6 +5,17 @@ import Image from 'next/image';
 export default function HeroSection() {
   const naverBookingUrl = "https://booking.naver.com/booking/6/bizes/1312309";
 
+  // 메뉴 섹션으로 스크롤하는 함수
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
   return (
     <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* 배경 이미지 및 오버레이 */}
@@ -32,20 +43,23 @@ export default function HeroSection() {
         
         {/* 버튼 그룹 */}
         <div className="flex flex-wrap justify-center gap-4">
+          {/* 예약하기 버튼 - 직접 링크만 사용 */}
           <a
-            href={naverBookingUrl}
+            href="https://booking.naver.com/booking/6/bizes/1312309"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-amber-800 text-white rounded-md font-medium hover:bg-amber-900 transition duration-300 cursor-pointer"
           >
             예약하기
           </a>
-          <a
-            href="#menu"
+          
+          {/* 메뉴 보기 버튼 - 직접 onClick 이벤트만 사용 */}
+          <button
+            onClick={scrollToMenu}
             className="inline-block px-8 py-3 border border-white text-white rounded-md font-medium hover:bg-white hover:text-amber-900 transition duration-300 cursor-pointer"
           >
             메뉴 보기
-          </a>
+          </button>
         </div>
       </div>
     </div>

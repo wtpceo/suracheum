@@ -11,6 +11,17 @@ export default function Hero() {
     "/image/here/hero3.jpg"
   ];
 
+  // 메뉴 섹션으로 스크롤하는 함수
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -53,12 +64,18 @@ export default function Hero() {
           400평 규모의 고급 한정식 다이닝에서 펼쳐지는 품격 있는 맛과 멋
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-amber-800 text-white rounded-md hover:bg-amber-900 transition duration-300 text-lg">
+          <button 
+            onClick={scrollToMenu}
+            className="px-8 py-3 bg-amber-800 text-white rounded-md hover:bg-amber-900 transition duration-300 text-lg">
             메뉴 보기
           </button>
-          <button className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition duration-300 text-lg">
+          <a 
+            href="https://booking.naver.com/booking/6/bizes/1312309"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition duration-300 text-lg inline-block">
             예약하기
-          </button>
+          </a>
         </div>
       </div>
       

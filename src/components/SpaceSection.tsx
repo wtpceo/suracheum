@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 export default function SpaceSection() {
   const spaces = [
     {
-      name: "본관",
+      name: "돌잔치",
       description: "고풍스러운 인테리어와 편안한 좌식 공간",
       capacity: "최대 60명",
       features: "전통적인 분위기, 단체 모임에 적합"
     },
     {
-      name: "별채",
+      name: "상견례",
       description: "프라이빗한 식사를 위한 독립 공간",
       capacity: "최대 20명",
       features: "완벽한 프라이버시, VIP 모임에 적합"
     },
     {
-      name: "누마루",
+      name: "가족모임",
       description: "아름다운 정원을 바라보는 특별한 공간",
       capacity: "최대 30명",
       features: "탁 트인 전망, 계절 감상에 좋음"
     },
     {
-      name: "연회장",
+      name: "기업행사",
       description: "대규모 모임을 위한 넓은 공간",
       capacity: "최대 100명",
       features: "현대적 시설, 각종 행사에 적합"
@@ -60,7 +60,7 @@ export default function SpaceSection() {
   };
   
   return (
-    <section className="py-20 bg-amber-50/50 overflow-hidden">
+    <section id="space" className="py-20 bg-amber-50/50 overflow-hidden">
       <motion.div 
         className="container mx-auto px-4"
         initial="hidden"
@@ -187,19 +187,6 @@ export default function SpaceSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-        
-        <motion.div 
-          className="mt-12 text-center"
-          variants={itemVariants}
-        >
-          <motion.button 
-            className="px-6 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-900 transition duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            공간 더 보기
-          </motion.button>
         </motion.div>
       </motion.div>
     </section>
