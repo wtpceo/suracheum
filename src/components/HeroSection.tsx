@@ -3,8 +3,6 @@
 import Image from 'next/image';
 
 export default function HeroSection() {
-  const naverBookingUrl = "https://booking.naver.com/booking/6/bizes/1312309";
-
   // 메뉴 섹션으로 스크롤하는 함수
   const scrollToMenu = () => {
     const menuSection = document.getElementById("menu");
