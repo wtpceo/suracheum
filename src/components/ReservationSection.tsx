@@ -120,7 +120,7 @@ export default function ReservationSection() {
                       className="font-medium text-amber-800"
                       whileHover={{ color: "#78350f", x: 2 }}
                     >
-                      0507-1326-3322
+                      031-8042-3319
                     </motion.span>
                   </div>
                 </div>

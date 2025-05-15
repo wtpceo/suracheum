@@ -51,7 +51,7 @@ export default function Hero() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-black/30 z-10" />
+          <div className="absolute inset-0 bg-black/50 z-10" />
         </div>
       </div>
       
@@ -60,9 +60,20 @@ export default function Hero() {
           수라채움
         </h1>
         <div className="h-0.5 w-24 bg-amber-500 mx-auto mb-8"></div>
-        <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-medium">
-          400평 규모의 고급 한정식 다이닝에서 펼쳐지는 품격 있는 맛과 멋
-        </p>
+        
+        {/* 새로운 카피 텍스트 - 모바일에서도 잘 보이게 설정 */}
+        <div className="mb-8 space-y-3 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed px-3">
+            저희 수라채움은 집밥에 요리개념을 더 했습니다.
+          </p>
+          <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed px-3">
+            계절에 따라 엄선된 식재료로 건강을 생각하여 만들었습니다.
+          </p>
+          <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed px-3">
+            부모님을 모시는 마음으로 정성을 다하겠습니다.
+          </p>
+        </div>
+        
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
             onClick={scrollToMenu}

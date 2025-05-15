@@ -85,7 +85,7 @@ export default function AboutSection() {
               className="text-3xl md:text-4xl font-bold text-amber-900 mb-6 font-serif tracking-wide"
               variants={itemVariants}
             >
-              음식 그 이상의 가치를<br />담아내는 수라채움
+              수라채움은 집밥에<br />요리의 개념을 더했습니다.
             </motion.h2>
             
             <motion.div 

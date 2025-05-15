@@ -26,7 +26,7 @@ export default function HeroSection() {
           quality={90}
           style={{ objectFit: 'cover' }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 
       {/* 콘텐츠 컨테이너 */}
@@ -35,9 +35,19 @@ export default function HeroSection() {
           수라채움
         </h1>
         <div className="h-0.5 w-16 bg-amber-400 mx-auto mb-6"></div>
-        <p className="text-xl md:text-2xl mb-10 font-light tracking-wide">
-          고품격 한정식의 품격을 담아내다
-        </p>
+        
+        {/* 새로운 카피 텍스트 - 모바일에서도 잘 보이게 설정 */}
+        <div className="mb-10 space-y-3">
+          <p className="text-lg md:text-xl font-light tracking-wide leading-relaxed px-2">
+            저희 수라채움은 집밥에 요리개념을 더 했습니다.
+          </p>
+          <p className="text-lg md:text-xl font-light tracking-wide leading-relaxed px-2">
+            계절에 따라 엄선된 식재료로 건강을 생각하여 만들었습니다.
+          </p>
+          <p className="text-lg md:text-xl font-light tracking-wide leading-relaxed px-2">
+            부모님을 모시는 마음으로 정성을 다하겠습니다.
+          </p>
+        </div>
         
         {/* 버튼 그룹 */}
         <div className="flex flex-wrap justify-center gap-4">
