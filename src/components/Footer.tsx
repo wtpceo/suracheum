@@ -51,9 +51,9 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 tracking-wide">연락처</h4>
             <address className="not-italic text-amber-200/80">
               <p className="mb-2">경기도 시흥시 거북섬둘레길 10, 314호</p>
-              <p className="mb-2">영업시간: 11:00 - 21:00 (연중무휴)</p>
-              <p className="mb-2">전화: 0507-1326-3322</p>
-              <p className="mb-2">이메일: info@suracheum.com</p>
+              <p className="mb-2">영업시간: 11:00 - 21:00 (매월 두째주 휴무)</p>
+              <p className="mb-2">전화: 031-8042-3319</p>
+              <p className="mb-2">이메일: sura-chaeum@naver.com</p>
               <a 
                 href={naverBookingUrl}
                 target="_blank"

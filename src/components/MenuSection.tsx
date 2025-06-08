@@ -192,34 +192,36 @@ export default function MenuSection() {
               variants={itemVariants}
               whileHover={{ y: -10, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
             >
-              <div className="flex flex-col md:flex-row h-auto md:h-64">
-                <div className="h-56 md:h-auto md:w-2/5 relative">
+              <div className="flex flex-col h-full">
+                <div className="relative w-full h-72 overflow-hidden">
                   <Image
                     src={menu.image}
                     alt={menu.name}
                     fill
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={index < 2}
+                    className="hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = "/image/menu/default-food.jpg";
                     }}
                   />
                 </div>
-                <div className="p-6 md:w-3/5 flex flex-col justify-between">
+                <div className="p-5 flex flex-col flex-grow">
                   <div>
                     <div className="border-b border-amber-100 pb-3 mb-3">
                       <h3 className="text-xl font-bold text-amber-900 font-serif tracking-wide mb-2">{menu.name}</h3>
                       <p className="text-gray-600 text-sm">{menu.description}</p>
                     </div>
                     <div className="bg-amber-50/50 p-3 rounded-md mb-3">
-                      <p className="text-gray-700 text-sm font-medium">
+                      <p className="text-gray-700 text-sm font-medium break-keep">
                         <span className="text-amber-800">구성:</span> {menu.includes.replace(/\s\+\s/g, ' + ')}
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-end mt-auto">
-                    <p className="text-amber-900 font-bold">{menu.price}</p>
+                  <div className="flex justify-end mt-auto pt-3">
+                    <p className="text-amber-900 font-bold text-lg">{menu.price}</p>
                   </div>
                 </div>
               </div>
@@ -266,7 +268,7 @@ export default function MenuSection() {
               </motion.button>
             </div>
             
-            <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
               {allMenus.map((menu, index) => (
                 <motion.div 
                   key={index} 
@@ -276,13 +278,14 @@ export default function MenuSection() {
                   transition={{ delay: index * 0.05 }}
                   whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
                 >
-                  <div className="h-48 relative">
+                  <div className="relative w-full h-64">
                     <Image
                       src={menu.image}
                       alt={menu.name}
                       fill
                       style={{ objectFit: 'cover' }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = "/image/menu/default-food.jpg";
@@ -294,12 +297,12 @@ export default function MenuSection() {
                       <h3 className="text-lg font-bold text-amber-900 font-serif tracking-wide mb-1">{menu.name}</h3>
                       <p className="text-gray-600 text-xs">{menu.description}</p>
                     </div>
-                    <div className="bg-amber-50/50 p-2 rounded-md mb-2 text-xs">
-                      <p className="text-gray-700 font-medium">
+                    <div className="bg-amber-50/50 p-2 rounded-md mb-2">
+                      <p className="text-gray-700 text-xs font-medium break-keep">
                         <span className="text-amber-800">구성:</span> {menu.includes.replace(/\s\+\s/g, ' + ')}
                       </p>
                     </div>
-                    <div className="flex justify-end">
+                    <div className="flex justify-end mt-2">
                       <p className="text-amber-900 font-bold text-sm">{menu.price}</p>
                     </div>
                   </div>
